@@ -18,7 +18,6 @@ class CrudController extends Controller
   
 
         return view('users_crud.create');
-        // echo $data;
     }
 
     public function update(){
