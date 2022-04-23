@@ -19,7 +19,7 @@
                 </div>
             </div>
             <br>
-                <div class="card-header"> Students List <a class="btn btn-submit float-end d-inline-block" href="{{ url ('home/create') }}">Add Student</a> </div>
+                <div class="card-header"> Student List <a class="btn btn-submit d-inline-block" href="{{ url ('home/create') }}"><span class="iconify" data-icon="carbon:add-filled"></span> Add Student</a> </div>
                 <div class="card-body">
                     <table class="table">
                         <thead>
@@ -36,20 +36,20 @@
                                 <td>{{$post->age}}</td>
                                 <td>
                                     
-                                    <a class="btn btn-show d-inline-block" href=""><span class="iconify" data-icon="carbon:view-filled"></span>View</a>
+                                    <a class="btn btn-show d-inline-block" href="/home/{{$post->id}}/view"><span class="iconify" data-icon="carbon:view-filled"></span>View</a>
                                     <a class="btn btn-edit d-inline-block" href="/home/{{$post->id}}/edit"><span class="iconify" data-icon="akar-icons:edit"></span>Edit</a>
                                     <form class="d-inline-block" action="/home/{{$post->id}}" method="POST">
                                         @csrf
 
                                         @method('DELETE')
 
-                                        <button class="btn btn-delete" ><span class="iconify" data-icon="fluent:delete-28-filled"></span></span>Delete</button>
+                                        <button class="btn btn-delete" ><span class="iconify" data-icon="fluent:delete-20-filled"></span>Delete</button>
                                         
                                     </form>
                                     
                                 </td>
                             </tr>
-                            @endforeach
+                        @endforeach
                         </tbody>
 
                     </table>

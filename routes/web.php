@@ -22,14 +22,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Laravel 8  (New way of routing)
-// the 'use App\Http\Controllers' is been defined above so that it's not  too long when calling the path for the selected controller file
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-// Route::get('/posts', [PostsController::class, 'index']);
 Route::get('/home/create', [PostsController::class, 'create']);
-Route::post('home', [PostsController::class, 'store']);
-// Route::get('home/{post}/view', [PostsController::class, 'show']);
+Route::post('/home', [PostsController::class, 'store']);
+Route::get('/home/{post}/view', [PostsController::class, 'show']);
 Route::get('/home/{post}/edit', [PostsController::class, 'edit']);
 Route::put('/home/{post}', [PostsController::class, 'update']);
 Route::delete('/home/{post}', [PostsController::class, 'destroy']);

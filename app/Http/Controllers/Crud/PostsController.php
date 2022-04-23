@@ -9,13 +9,11 @@ use App\Models\Posts;
 class PostsController extends Controller
 {
     //display data from database
-    public function show(Post $post)
+    public function show(Posts $post)
     {
         // dd(Posts::all());
-        $post = Posts();
-
         
-        return view('crud.view', ['posts' => $posts]); //pass data to your views
+        return view('crud.view', compact('post'));
     }
 
     // create method

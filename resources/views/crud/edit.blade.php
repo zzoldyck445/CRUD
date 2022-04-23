@@ -21,18 +21,13 @@
                                 <input type="text" class="form-control" id="course" name="course" value="{{$post->course}}">
                             </div>
                             <div class="mb-3">
-                                <label for="age" class="form-label">Age
+                                <label for="age" class="form-label">Age</label>
                                 <input type="number" class="form-control" id="age" min="0" name="age" value="{{$post->age}}">
-                                </label>
-                                <!-- <input type="number" class="form-control" id="age" min="0" value="{{$post->age}}"> -->
                             </div>
-                            <!-- <div class="mb-3">
-                                <label for="male" class="radio-inline"><input type="radio" name="sex" value="Male">Male</label>
-                                <label for="female"class="radio-inline"><input type="radio" name="sex" value="Female">Female</label>
-                            </div> -->
+                            
                             <div class="mb-3">
-                            <button  class="btn btn-submit">Update</button>
-                            <a class="btn btn-cancel" href="{{ route ('home') }}">Cancel</a>
+                                <button  class="btn btn-submit">Update</button>
+                                <a class="btn btn-cancel" href="{{ route ('home') }}">Cancel</a>
                             </div>
 
                         </div>
